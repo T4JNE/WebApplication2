@@ -23,7 +23,7 @@ namespace WebApplication2.Pages
         {
             try
             {
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Eduardo\\source\\repos\\WpfApp3\\bin\\Debug\\net5.0-windows\\database.mdf;Integrated Security=True;Connect Timeout=30";
+                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename="+ AppDomain.CurrentDomain.BaseDirectory + "database.mdf" + ";Integrated Security=True;Connect Timeout=30";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();

@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Data.SqlClient;
-using System.Diagnostics;
 
 namespace WebApplication2.Pages
 {
@@ -19,7 +18,7 @@ namespace WebApplication2.Pages
 
             try
             {
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Eduardo\\source\\repos\\WpfApp3\\bin\\Debug\\net5.0-windows\\database.mdf;Integrated Security=True;Connect Timeout=30";
+                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + AppDomain.CurrentDomain.BaseDirectory + "database.mdf" + ";Integrated Security=True;Connect Timeout=30";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
@@ -45,19 +44,17 @@ namespace WebApplication2.Pages
 
                 throw;
             }
-            Trace.WriteLine("GET: " + Job.Id);
         }
 
         public void OnPost()
         {
             Job.Id = Int32.Parse(Request.Form["Id"]);
-            Trace.WriteLine("POST: " + Job.Id);
             Job.WorkerName = Request.Form["WorkerName"];
             Job.Localization = Request.Form["Localization"];
 
             try
             {
-                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Eduardo\\source\\repos\\WpfApp3\\bin\\Debug\\net5.0-windows\\database.mdf;Integrated Security=True;Connect Timeout=30";
+                string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + AppDomain.CurrentDomain.BaseDirectory + "database.mdf" + ";Integrated Security=True;Connect Timeout=30";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
