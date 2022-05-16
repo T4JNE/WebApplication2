@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApplication2</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/startpage.css">
+    <link rel="stylesheet" href="/css/account.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div id="header-background">
+        <header>
+            <button id="dropdownbtn" onclick="MenuClick()">=</button>
+            <a href="Index">Start</a>
+            <a href="baza">Baza</a>
+            <a href="kontakt">Kontakt</a>
+            <a href="galeria">Galeria</a>
+            <a href="praca">Praca</a>
+        </header>
+    </div>
+
+    <div id="DropMenu" class="dropdown-content">
+        <a href="Index" class="active">Start</a>
+        <a href="baza">Baza</a>
+        <a href="kontakt">Kontakt</a>
+        <a href="galeria">Galeria</a>
+        <a href="praca">Praca</a>
+    </div>
+
+    <div id="account-div" class="account">
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <div class="footer-spacer"></div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - WebApplication2 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

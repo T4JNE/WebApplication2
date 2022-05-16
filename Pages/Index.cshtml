@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link rel="stylesheet" href="css/startpage.css">
+
+<div class="Mid">
+    <img id="logo" src="img/logo2.png" alt="LOGO HERE">
+    <p id="clock">00:00</p>
+</div>
+
+<script type="text/javascript">
+    function displayTime() {
+      let d = new Date();
+      let time = d.toLocaleTimeString();
+      document.getElementById("clock").innerText = time;
+      let t = setTimeout(function(){ displayTime() }, 1000);}
+    displayTime();
+</script>
+
+
+<div class="MainContent">
+    <h1>Dlaczego warto remontować u nas?</h1>
+    <div class="">
+        <video id="video1" width="560" height="315" src="videos/vid1.mp4" controls>
+            Twoja przeglądarka nie wspiera odtwarzania video.
+        </video>
+    </div>
+    <h1>Profesjonalna kadra, indywidualne podejście do klienta, materiały najwyższej jakości</h1>
+    <div>
+        Działamy od ponad 14 lat. Początki naszej działalności w branży budowlanej, to przede wszystkim usługi remontowe.
+        Do dziś remonty i usługi remontowe zajmują ważne miejsce w naszej ofercie. Wykonujemy zarówno drobne remonty, jak i remonty kapitalne.
+        Remontujemy mieszkania, domy, segmenty, a nierzadko również zajmujemy się wykończeniem lokali usługowych.
+        <br><br>
+        W miarę nabywania doświadczenia i kwalifikacji poszerzyliśmy naszą ofertę.
+        Uzupełniła ją budowa domów w różnym standardzie wykończenia – stan surowy, deweloperski oraz budowa domów pod klucz.
+        Początkowo usługi budowlane kierowaliśmy do inwestorów prywatnych – osób,
+        które marzyły o budowie własnego domu i poszukiwały rzetelnego wykonawcy.
+        Kolejnym krokiem było zaangażowanie umiejętności i wiedzy na rynku deweloperskim.
+        Dzięki temu obecnie, obok budowy domów zgodnie z projektem możemy zaproponować także sprzedaż gotowych domów w wybranym standardzie wykończenia.
+        <br><br>
+        Wyróżniamy się indywidualnym podejściem do klienta i zrozumieniem jego potrzeb.
+        Dysponujemy fachową wiedzą oraz sprawdzonymi ekipami wykonawczymi.
+        W naszych realizacjach stosujemy materiały najwyższej jakości,
+        dzięki czemu realizowane remonty oraz usługi budowlane pozostają na najwyższym poziomie,
+        a gotowe realizacje odznaczają się wysoką estetyką oraz komfortem użytkowania.
+        To wszystko sprawia, że jako firma budowlana jesteśmy szczególnie cenieni przez naszych Klientów.
+        <br><br>
+        Praca jest naszą pasją. Tworzymy prawdziwą, często długo wyczekiwana przestrzeń do codziennego życia.
+        Wiemy co dla rodziny znaczy dom i jak duża spoczywa na nas odpowiedzialność.
+        Dbamy więc o każdy szczegół i dokładamy wszelkich starań, aby efekty naszych prac były zgodne z oczekiwaniami klientów.
+        Budowa domów to obecnie jedna z naszych podstawowych usług, które świadczymy z zachowaniem najwyższych standardów branżowych.
+        Nasze usługi kierujemy zarówno do Klientów zainteresowanych realizacją projektu własnego, jak i osób zainteresowanych zakupem domu od dewelopera.
+        <br><br>
+        Klientów poszukujących rzetelnej i sprawdzonej firmy budowlanej zachęcamy do szczegółowego zapoznania się z naszą ofertą oraz dotychczasowymi realizacjami.
+        Świadczymy usługi budowlane, wykonujemy remonty,
+        oferujemy gotowe domy na sprzedaż – w razie pytań lub wątpliwości dotyczących zakresu realizowanych usług zachęcamy do kontaktu.
+    </div>
+</div>

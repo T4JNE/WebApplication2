@@ -1,0 +1,61 @@
+﻿.MainContent {
+    --min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-self: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+    .MainContent > div {
+        font-size: 20px;
+        max-width: 600px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        flex-grow: 1;
+    }
+
+    .MainContent img {
+        display: flex;
+        width: 100%;
+        height: auto;
+        max-width: 600px;
+    }
+
+iframe{
+    border-radius: 20px;
+}
+
+.ImageGallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 25px;
+}
+
+    .ImageGallery .image {
+        border-radius: 20px;
+        box-shadow: 8px 12px 5px lightgray;
+        width: 90%;
+        max-width: 550px;
+        height: auto;
+        float: left;
+    }
+
+.limitWidth {
+    width: 90vw;
+    height: 75vh;
+    max-width: 600px;
+    max-height: 450px;
+}
+
+.Title {
+    display: flex;
+    align-self: center;
+    font-weight: 5em;
+}

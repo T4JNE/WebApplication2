@@ -1,0 +1,13 @@
+﻿@page
+@model WebApplication2.Pages.EditModel
+@{
+    ViewData["Title"] = "Edytuj fuszke";
+}
+
+<form method="post">
+    <input type="hidden" name="Id" value="@Model.Job.Id" />
+    <input type="text" name="Localization" value="@Model.Job.Localization" />
+    <input type="text" name="WorkerName" value="@Model.Job.WorkerName" />
+
+    <input type="submit" />
+</form>

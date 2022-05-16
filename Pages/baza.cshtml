@@ -1,0 +1,38 @@
+﻿@page
+@model bazaModel
+@{
+    ViewData["Title"] = "Baza danych";
+}
+
+<link rel="stylesheet" href="css/db.css">
+
+<h1>Lista naszych robótek</h1>
+<div class="table-div">
+    <table>
+        <tr class="table-header">
+            <th>ID</th>
+            <th>Lokalizacja</th>
+            <th>Wykonawca</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.job_list)
+        {
+            <tr class="table-item">
+                <td>@item.Id</td>
+                <td>@item.Localization</td>
+                <td>@item.WorkerName</td>
+                <td>
+                    <a class="primary" href="Edit?Id=@item.Id">Edytuj</a>
+                    <a class="warn" href="Delete?Id=@item.Id">Usuń</a>
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    <a class="primary new-btn" href="Create">Nowa robótka</a>
+</div>
+<br/>
+<br/>
+

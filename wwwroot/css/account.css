@@ -1,0 +1,65 @@
+﻿.account {
+    position: fixed;
+    margin-top: 75px;
+    margin-right: 45px;
+    z-index: 3;
+    align-self: flex-end;
+    gap: 15px;
+}
+
+    .account > #background {
+        padding: 25px;
+        background-color: #615055;
+        border: 2px solid #B4A6AB;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .account button {
+        padding: 10px;
+        align-self: center;
+        border-style: solid;
+        border-color: #B4A6AB;
+        border-radius: 15px;
+        background-color: inherit;
+        color: #B4A6AB;
+        font-size: 20px;
+        transition: 0.2s;
+        margin-bottom: 50px;
+    }
+
+    .account a {
+        border-style: solid;
+        border-color: #B4A6AB;
+        border-radius: 15px;
+        color: #B4A6AB;
+        padding: 10px 15px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        font-style: oblique;
+        font-weight: 700;
+        margin-left: 1px;
+        margin-right: 1px;
+        transition: 0.2s;
+    }
+
+        .account a:hover, button:hover {
+            --background: #DDF8E8;
+            border-color: #DDF8E8;
+            color: #DDF8E8;
+            cursor: pointer;
+        }
+
+#login-form {
+    display: flex;
+}
+
+@media screen and (max-width: 700px) {
+    .account {
+        margin-right: 0;
+        align-self: center;
+    }
+}
