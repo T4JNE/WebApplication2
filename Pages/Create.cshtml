@@ -4,9 +4,12 @@
     ViewData["Title"] = "Nowa fuszka";
 }
 
-<form method="post">
-    <input type="text" name="Localization" value="" />
-    <input type="text" name="WorkerName" value="" />
+<link rel="stylesheet" href="css/form.css">
 
-    <input type="submit" />
+<form method="post">
+    <label for="Localization">Lokalizacja</label><br>
+    <input type="text" name="Localization" value="" />
+    <label for="WorkerName">Wykonawca</label><br>
+    <input type="text" name="WorkerName" value="" />
+    <input type="submit"/>
 </form>
